@@ -11,14 +11,14 @@ namespace DebugUI
 
         protected virtual void Awake()
         {
-            var debugAppBuilder = new DebugUIBuilder();
-            debugAppBuilder.ConfigureWindowOptions(options =>
+            var builder = new DebugUIBuilder();
+            builder.ConfigureWindowOptions(options =>
             {
                 options.WindowName = GetType().Name;
             });
 
-            Configure(debugAppBuilder);
-            debugAppBuilder.BuildWith(uiDocument);
+            Configure(builder);
+            builder.BuildWith(uiDocument);
         }
     }
 }
