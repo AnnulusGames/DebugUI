@@ -1,6 +1,6 @@
 {
     "name": "com.annulusgames.debug-ui",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Debug UI",
     "description": "A framework for building debugging tools built on Unity UI Toolkit.",
     "unity": "2022.1",
