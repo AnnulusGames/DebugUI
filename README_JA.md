@@ -154,7 +154,7 @@ builder.AddField("Read-Only Field", () => floatValue);
 ```
 
 > [!NOTE]
-> `AddField()`は現在、`bool`,`int`,`float`,`string`,`Vector2`,`Vector3`,`Vector4`,`Vector2Int`,`Vector3Int`,`Rect`,`RectInt`,`Bounds`,`BoundsInt`に対応しています。
+> `AddField()`は現在、`bool`, `int`, `float`, `string`, `Enum`, `Vector2`, `Vector3`, `Vector4`, `Vector2Int`, `Vector3Int`, `Rect`, `RectInt`, `Bounds`, `BoundsInt`に対応しています。
 
 > [!TIP]
 > `AddField()`で作成したフィールドは対象の値と双方向にバインドされ、フィールドまたは元の値に変更を加えると自動的にもう片方へ反映されます。
