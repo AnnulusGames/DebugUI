@@ -9,6 +9,7 @@
         <ui:ProgressBar value="22" title="my-progress" />
         <DebugUI.UIElements.FillSlider label="Slider" />
         <ui:Vector3Field label="Vec3 Field" />
+        <ui:EnumField label="Enum" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" value="Center" />
         <ui:Foldout text="Foldout" />
     </DebugUI.UIElements.DebugWindow>
 </ui:UXML>

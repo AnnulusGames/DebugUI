@@ -212,8 +212,41 @@ namespace DebugUI
         }
     }
 
+    internal sealed class DebugEnumFieldFactory<TEnum> : IDebugUIElementFactory
+        where TEnum : Enum
+    {
+        public string Label { get; set; }
+        public Func<TEnum> Getter { get; set; }
+        public Action<TEnum> Setter { get; set; }
+
+        public VisualElement CreateVisualElement(ICollection<IDisposable> disposables)
+        {
+            var field = new EnumField(Getter())
+            {
+                label = Label,
+            };
+
+            if (Setter == null)
+            {
+                VisualElementHelper.SetInputFieldsEnabled(field, false);
+            }
+            else
+            {
+                field.RegisterValueChangedCallback(x => Setter((TEnum)x.newValue));
+            }
+
+            MinimalRx.EveryValueChanged(this, x => x.Getter())
+                .Subscribe(x =>
+                {
+                    field.value = x;
+                })
+                .AddTo(disposables);
+
+            return field;
+        }
+    }
+
     internal sealed class DebugFieldFactory<TValue, TField> : IDebugUIElementFactory
-        where TValue : IEquatable<TValue>
         where TField : BaseField<TValue>, new()
     {
         public string Label { get; set; }
@@ -249,7 +282,6 @@ namespace DebugUI
     }
 
     internal sealed class DebugCompositeFieldFactory<TValue, TCompositeField, TField, TFieldValue> : IDebugUIElementFactory
-        where TValue : IEquatable<TValue>
         where TCompositeField : BaseCompositeField<TValue, TField, TFieldValue>, new()
         where TField : TextValueField<TFieldValue>, new()
     {

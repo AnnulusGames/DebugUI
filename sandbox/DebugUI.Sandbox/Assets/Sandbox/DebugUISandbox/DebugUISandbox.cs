@@ -1,7 +1,15 @@
+using System;
 using UnityEngine;
 
 namespace DebugUI.Sandbox
 {
+    public enum EnumExample
+    {
+        Alpha,
+        Beta,
+        Gamma
+    }
+
     public sealed class DebugUISandbox : DebugUIBuilderBase
     {
         [Header("Fields")]
@@ -14,6 +22,7 @@ namespace DebugUI.Sandbox
         [SerializeField] Vector2Int vector2IntValue;
         [SerializeField] Vector3Int vector3IntValue;
         [SerializeField] Bounds boundsValue;
+        [SerializeField] EnumExample enumValue;
 
         [Header("Slider")]
         [SerializeField, Range(0f, 10f)] float sliderValue;
@@ -69,6 +78,7 @@ namespace DebugUI.Sandbox
                 builder.AddField("Vector2Int", () => vector2IntValue, x => vector2IntValue = x);
                 builder.AddField("Vector3Int", () => vector3IntValue, x => vector3IntValue = x);
                 builder.AddField("Bounds", () => boundsValue, x => boundsValue = x);
+                builder.AddField("Enum", () => enumValue, x => enumValue = x);
             });
             
             builder.AddFoldout("Sliders", builder =>
