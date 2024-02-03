@@ -52,15 +52,19 @@ namespace DebugUI.Sandbox
                 options.Title = "Demo";
             });
 
-            builder.AddLabel("Physics");
-            builder.AddSlider("Time Scale", 0f, 3f, () => Time.timeScale, x => Time.timeScale = x);
-            builder.AddSlider("Gravity Scale", 0f, 3f, () => GravityScale, x => GravityScale = x);
-            builder.AddButton("Add Circle", () => Instantiate(prefab));
-            builder.AddButton("Reset", () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex));
+            builder.AddFoldout("Physics", builder =>
+            {
+                builder.AddSlider("Time Scale", 0f, 3f, () => Time.timeScale, x => Time.timeScale = x);
+                builder.AddSlider("Gravity Scale", 0f, 3f, () => GravityScale, x => GravityScale = x);
+                builder.AddButton("Add Circle", () => Instantiate(prefab));
+                builder.AddButton("Reload Scene", () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex));
+            });
 
-            builder.AddLabel("Post-processing");
-            builder.AddSlider("Hue Shift", -180f, 180f, () => colorAdjustments.hueShift.value, x => colorAdjustments.hueShift.value = x);
-            builder.AddSlider("Bloom Intensity", 0f, 10f, () => bloom.intensity.value, x => bloom.intensity.value = x);
+            builder.AddFoldout("Post-processing", builder =>
+            {
+                builder.AddSlider("Hue Shift", -180f, 180f, () => colorAdjustments.hueShift.value, x => colorAdjustments.hueShift.value = x);
+                builder.AddSlider("Bloom Intensity", 0f, 10f, () => bloom.intensity.value, x => bloom.intensity.value = x);
+            });
         }
     }
 }
