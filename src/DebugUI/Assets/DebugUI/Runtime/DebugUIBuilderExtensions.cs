@@ -19,6 +19,15 @@ namespace DebugUI
             return builder;
         }
 
+        public static IDebugUIBuilder AddSpace(this IDebugUIBuilder builder, float height)
+        {
+            builder.Factories.Add(new DebugSpaceFactory()
+            {
+                Height = height
+            });
+            return builder;
+        }
+
         public static IDebugUIBuilder AddLabel(this IDebugUIBuilder builder, string text)
         {
             builder.Factories.Add(new DebugLabelFactory()

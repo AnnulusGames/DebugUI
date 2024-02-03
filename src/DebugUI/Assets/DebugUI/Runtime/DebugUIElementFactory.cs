@@ -1,14 +1,24 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UIElements;
 using DebugUI.UIElements;
-using UnityEngine;
 
 namespace DebugUI
 {
     public interface IDebugUIElementFactory
     {
         VisualElement CreateVisualElement(ICollection<IDisposable> disposables);
+    }
+
+    internal sealed class DebugSpaceFactory : IDebugUIElementFactory
+    {
+        public float Height { get; set; }
+
+        public VisualElement CreateVisualElement(ICollection<IDisposable> disposables)
+        {
+            return new VisualElement() { style = { height = Height }};
+        }
     }
 
     internal sealed class DebugLabelFactory : IDebugUIElementFactory
