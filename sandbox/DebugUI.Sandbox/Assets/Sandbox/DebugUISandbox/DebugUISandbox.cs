@@ -42,7 +42,7 @@ namespace DebugUI.Sandbox
         {
             builder.ConfigureWindowOptions(options =>
             {
-                options.WindowName = "Sandbox";
+                options.Title = "Sandbox";
             });
 
             builder.AddFoldout("Labels", builder =>

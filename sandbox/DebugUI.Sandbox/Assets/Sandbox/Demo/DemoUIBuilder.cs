@@ -26,7 +26,7 @@ namespace DebugUI.Sandbox
         {
             builder.ConfigureWindowOptions(options =>
             {
-                options.WindowName = "Demo";
+                options.Title = "Demo";
             });
 
             builder.AddLabel("Physics");

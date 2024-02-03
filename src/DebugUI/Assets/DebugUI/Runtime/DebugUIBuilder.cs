@@ -34,11 +34,11 @@ namespace DebugUI
             var windowOptions = Options.OfType<DebugWindowOptions>().FirstOrDefault();
             if (windowOptions != null)
             {
-                window.Text = windowOptions.WindowName;
+                window.Text = windowOptions.Title;
                 window.SetDraggable(windowOptions.Draggable);
             }
 
             return window;
-        }    
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace DebugUI
             var builder = new DebugUIBuilder();
             builder.ConfigureWindowOptions(options =>
             {
-                options.WindowName = GetType().Name;
+                options.Title = GetType().Name;
             });
 
             Configure(builder);
