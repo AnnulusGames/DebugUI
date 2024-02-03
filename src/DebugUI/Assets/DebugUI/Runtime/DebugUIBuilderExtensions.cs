@@ -47,6 +47,30 @@ namespace DebugUI
             return builder;
         }
 
+        public static IDebugUIBuilder AddField<TEnum>(this IDebugUIBuilder builder, string label, Func<TEnum> getter)
+            where TEnum : Enum
+        {
+            builder.Factories.Add(new DebugEnumFieldFactory<TEnum>()
+            {
+                Label = label,
+                Getter = getter,
+            });
+            return builder;
+        }
+
+
+        public static IDebugUIBuilder AddField<TEnum>(this IDebugUIBuilder builder, string label, Func<TEnum> getter, Action<TEnum> setter)
+            where TEnum : Enum
+        {
+            builder.Factories.Add(new DebugEnumFieldFactory<TEnum>()
+            {
+                Label = label,
+                Getter = getter,
+                Setter = setter,
+            });
+            return builder;
+        }
+
         public static IDebugUIBuilder AddField(this IDebugUIBuilder builder, string label, Func<bool> getter)
         {
             builder.Factories.Add(new DebugFieldFactory<bool, Toggle>()
@@ -67,7 +91,6 @@ namespace DebugUI
             });
             return builder;
         }
-
 
         public static IDebugUIBuilder AddField(this IDebugUIBuilder builder, string label, Func<int> getter)
         {
