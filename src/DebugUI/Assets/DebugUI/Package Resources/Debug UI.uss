@@ -53,6 +53,13 @@
     margin-left: 0;
 }
 
+.unity-slider-int {
+    margin-top: 4px;
+    margin-right: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+}
+
 .unity-base-slider--horizontal .unity-base-slider__tracker {
     border-top-width: 0;
     border-right-width: 0;
