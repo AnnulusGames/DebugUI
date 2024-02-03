@@ -29,8 +29,13 @@ namespace DebugUI.UIElements
             dragContainer.AddToClassList("debug-ui-slider__drag-container");
 
             OnValueChanged(value);
-
             this.RegisterValueChangedCallback(x => OnValueChanged(x.newValue));
+        }
+
+        public void ForceUpdateValue(float x)
+        {
+            this.value = x;
+            OnValueChanged(x);
         }
 
         void OnValueChanged(float x)
@@ -66,8 +71,13 @@ namespace DebugUI.UIElements
             dragContainer.AddToClassList("debug-ui-slider__drag-container");
 
             OnValueChanged(value);
-
             this.RegisterValueChangedCallback(x => OnValueChanged(x.newValue));
+        }
+
+        public void ForceUpdateValue(int x)
+        {
+            this.value = x;
+            OnValueChanged(x);
         }
 
         void OnValueChanged(int x)

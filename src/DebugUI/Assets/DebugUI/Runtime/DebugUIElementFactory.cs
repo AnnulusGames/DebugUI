@@ -17,7 +17,7 @@ namespace DebugUI
 
         public VisualElement CreateVisualElement(ICollection<IDisposable> disposables)
         {
-            return new VisualElement() { style = { height = Height }};
+            return new VisualElement() { style = { height = Height } };
         }
     }
 
@@ -64,10 +64,7 @@ namespace DebugUI
                 highValue = HighValue,
             };
 
-            field.schedule.Execute(() =>
-            {
-                field.value = Getter();
-            });
+            field.ForceUpdateValue(Getter());
 
             if (Setter == null)
             {
@@ -108,10 +105,7 @@ namespace DebugUI
                 highValue = HighValue,
             };
 
-            field.schedule.Execute(() =>
-            {
-                field.value = Getter();
-            });
+            field.ForceUpdateValue(Getter());
 
             if (Setter == null)
             {
