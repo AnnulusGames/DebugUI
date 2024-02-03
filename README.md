@@ -128,7 +128,7 @@ If you want to use an existing theme, add the DebugUI uss to the Style Sheets of
 
 ### Label
 
-![img](docs/images/example-label.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-label.png" width="400">
 
 ```cs
 builder.AddLabel("Label");
@@ -136,7 +136,7 @@ builder.AddLabel("Label");
 
 ### Button
 
-![img](docs/images/example-button.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-button.png" width="400">
 
 ```cs
 builder.AddButton("Button", () => Debug.Log("Hello!"));
@@ -144,7 +144,7 @@ builder.AddButton("Button", () => Debug.Log("Hello!"));
 
 ### Field
 
-![img](docs/images/example-field.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-field.png" width="400">
 
 ```cs
 float floatValue;
@@ -161,7 +161,7 @@ builder.AddField("Read-Only Field", () => floatValue);
 
 ### Slider
 
-![img](docs/images/example-slider.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-slider.png" width="400">
 
 ```cs
 float floatValue;
@@ -173,7 +173,7 @@ builder.AddSlider("Slider Int", 0, 100, () => intValue, x => intValue = x);
 
 ### Progress Bar
 
-![img](docs/images/example-progress.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-progress.png" width="400">
 
 ```cs
 float floatValue;
@@ -183,7 +183,7 @@ builder.AddProgressBar("Progress", 0f, 1f, () => floatValue);
 
 ### Image
 
-![img](docs/images/example-image.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-image.png" width="400">
 
 ```cs
 Texture2D texture2D;
@@ -199,7 +199,7 @@ builder.AddImage("Dynamic", () => spriteRenderer.sprite);
 
 ### Foldout
 
-![img](docs/images/example-foldout.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/example-foldout.png" width="400">
 
 ```cs
 float floatValue;
