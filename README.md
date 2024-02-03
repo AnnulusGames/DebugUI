@@ -92,7 +92,7 @@ public class DebugUIBuilerExample : DebugUIBuilderBase
 }
 ```
 
-![img](docs/images/img2.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/img2.png" width="500">
 
 Attach this component to a suitable GameObject and specify the target UIDocument in the Inspector.
 
@@ -120,7 +120,7 @@ DebugUI provides a StyleSheet (uss) and Theme StyleSheet (tss) for a modern GUI 
 
 You can change the theme you want to use in the Panel Settings asset generated in the Assets folder when you introduce the UI Toolkit.
 
-![img](docs/images/img3.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/img3.png" width="500">
 
 If you want to use an existing theme, add the DebugUI uss to the Style Sheets of the tss asset you want to use.
 

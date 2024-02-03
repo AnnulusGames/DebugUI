@@ -92,7 +92,7 @@ public class DebugUIBuilerExample : DebugUIBuilderBase
 }
 ```
 
-![img](docs/images/img2.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/img2.png" width="500">
 
 このコンポーネントを適当なGameObjectにアタッチし、Inspectorで対象のUIDocumentを指定します。
 
@@ -120,7 +120,7 @@ DebugUIでは、モダンなGUIのスタイルを提供するStyle Sheet (uss)�
 
 使用するテーマは、UI Toolkitを導入するとAssetsフォルダ内に生成されるPanel Settingsアセットから変更できます。
 
-![img](docs/images/img3.png)
+<img src="https://github.com/AnnulusGames/DebugUI/blob/main/docs/images/img3.png" width="500">
 
 既存のテーマと併用したい場合には、使用するtssアセットのStyle SheetsにDebugUIのussを追加してください。
 
