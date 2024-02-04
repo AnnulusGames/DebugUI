@@ -119,6 +119,10 @@
     color: rgb(255, 255, 255);
 }
 
+.unity-base-text-field__input:disabled {
+    background-color: rgba(105, 105, 133, 0.8);
+}
+
 .unity-base-text-field {
     padding-top: 1px;
     padding-bottom: 1px;
@@ -140,14 +144,6 @@
     border-right-color: rgb(29, 132, 191);
     border-top-color: rgb(29, 132, 191);
     border-bottom-color: rgb(29, 132, 191);
-}
-
-.unity-base-text-field:disable > .unity-base-text-field__input {
-    border-left-color: rgba(255, 255, 255, 0);
-    border-right-color: rgba(255, 255, 255, 0);
-    border-top-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0);
-    background-color: rgb(105, 105, 133);
 }
 
 .unity-foldout__toggle {
