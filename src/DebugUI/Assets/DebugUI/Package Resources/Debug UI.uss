@@ -265,6 +265,10 @@
     -unity-background-image-tint-color: rgb(255, 255, 255);
 }
 
+.unity-toggle__checkmark:disabled {
+    background-color: rgba(105, 105, 133, 0.8);
+}
+
 .unity-enum-field {
     padding-top: 1px;
     padding-bottom: 1px;
@@ -288,6 +292,15 @@
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     background-color: rgb(105, 105, 133);
+    height: 32px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-enum-field__input:disabled {
+    background-color: rgba(105, 105, 133, 0.8);
     height: 32px;
     margin-top: 0;
     margin-right: 0;
