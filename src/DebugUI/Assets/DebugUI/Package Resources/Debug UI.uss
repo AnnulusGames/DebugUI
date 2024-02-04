@@ -248,6 +248,10 @@
     margin-left: 0;
 }
 
+.unity-toggle > .unity-toggle__input:disabled > .unity-toggle__checkmark {
+    background-color: rgba(105, 105, 133, 0.8);
+}
+
 .unity-toggle__checkmark {
     border-top-width: 0;
     border-right-width: 0;
@@ -263,10 +267,6 @@
     margin-bottom: 0;
     margin-left: 2px;
     -unity-background-image-tint-color: rgb(255, 255, 255);
-}
-
-.unity-toggle__checkmark:disabled {
-    background-color: rgba(105, 105, 133, 0.8);
 }
 
 .unity-enum-field {
