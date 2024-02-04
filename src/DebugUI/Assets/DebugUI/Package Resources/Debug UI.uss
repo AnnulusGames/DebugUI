@@ -146,14 +146,6 @@
     border-bottom-color: rgb(29, 132, 191);
 }
 
-.unity-base-text-field:disabled > .unity-base-text-field__input {
-    border-left-color: rgba(255, 255, 255, 0);
-    border-right-color: rgba(255, 255, 255, 0);
-    border-top-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0);
-    background-color: rgb(105, 105, 133);
-}
-
 .unity-foldout__toggle {
     margin-top: 0;
     margin-right: 0;
