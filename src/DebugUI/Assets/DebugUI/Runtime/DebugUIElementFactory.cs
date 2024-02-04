@@ -68,7 +68,7 @@ namespace DebugUI
 
             if (Setter == null)
             {
-                VisualElementHelper.SetInputFieldsEnabled(field, false);
+                field.SetEnabled(false);
             }
             else
             {
@@ -109,7 +109,7 @@ namespace DebugUI
 
             if (Setter == null)
             {
-                VisualElementHelper.SetInputFieldsEnabled(field, false);
+                field.SetEnabled(false);
             }
             else
             {
@@ -228,7 +228,7 @@ namespace DebugUI
 
             if (Setter == null)
             {
-                VisualElementHelper.SetInputFieldsEnabled(field, false);
+                field.SetEnabled(false);
             }
             else
             {
@@ -263,7 +263,7 @@ namespace DebugUI
 
             if (Setter == null)
             {
-                VisualElementHelper.SetInputFieldsEnabled(field, false);
+                field.SetEnabled(false);
             }
             else
             {
@@ -299,7 +299,7 @@ namespace DebugUI
 
             if (Setter == null)
             {
-                VisualElementHelper.SetInputFieldsEnabled(field, false);
+                field.SetEnabled(false);
             }
             else
             {
